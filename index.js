@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   form.addEventListener('submit', (event) => {
+    const form = document.getElementById('joke-form')
+    const jokeList = document.getElementById('joke-list')
+    const newJokeLi = document.createElement('li');
     const username = document.getElementById('name-input').value
     event.preventDefault();
     if(username === "") return;
